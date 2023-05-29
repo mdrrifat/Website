@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8" />
+    <title>Rifat</title>
+
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/vendor.css" />
+
+    <link rel="expertise" href="expertise.html" />
+    <link rel="portfolio" href="portfolio.html" />
+    <link rel="about" href="about.html" />
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <!--icon-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!--iconend-->
+  </head>
+
+  <body id="top">
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+      <div class="header-logo">
+        <a href="index.html"><div class="RIFAT">
+          <div data-glitch="RIFAT" class="glitch">RIFAT</div>
+       </div></a>
+      </div>
+
+      <div class="header-content">
+        <nav class="row header-nav-wrap">
+          <ul class="header-nav">
+            <li>
+              <a href="about.html" title="">ABOUT</a>
+            </li>
+            <li>
+              <a href="expertise.html" title="">EXPERTISE</a>
+            </li>
+            <li>
+              <a href="portfolio.html" title="">SHOWCASE</a>
+            </li>
+            <li>
+              <a class="smoothscroll" href="#contact" title="">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- end header-nav-wrap -->
+      </div>
+      <!-- end header-content -->
+
+      <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+    </header>
+    
+    <!-- hero
+    ================================================== -->
+    <section 
+      id="hero"
+      class="s-hero target-section"
+      data-parallax="scroll"
+      data-image-src="images/r.jpeg"
+      data-natural-width="3000"
+      data-natural-height="2000"
+      data-position-y="center"
+      
+      
+    >
+    
+      <div class="row hero-content">
+        <div class="column large-full">
+          <div class="container">
+            <h2>
+              Hello World<br />I'm Rifat<br />
+              <span class="auto-type"></span>
+            </h2>
+          </div>
+          <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+          <script>
+            var typed = new Typed(".auto-type", {
+              strings: [
+                "Cyber Security Expert",
+                "Web Designer",
+                "Software Developer",
+              ],
+
+              typeSpeed: 100,
+              backSpeed: 80,
+              toop: true,
+            });
+          </script>
+          <ul class="hero-social">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/md-ariful-islam-rifat-793029264/"
+                ><i class="fa fa-linkedin-square" style="font-size: 36px"></i
+              ></a>
+              &nbsp
+              <a href="https://github.com/mdrrifat?tab=repositories"
+                ><i class="fa fa-github" style="font-size: 36px"></i
+              ></a>
+              &nbsp
+              <a href="https://twitter.com/mdrifattt"
+                ><i class="fa fa-twitter" style="font-size: 36px"></i
+              ></a>
+            </li>
+          </ul>
+
+          <!-- end hero-social -->
+        </div>
+      </div>
+    </section>
+
+<!-- start falling -->
+
+    <section>
+      <head>
+      <style>
+          * {margin: 0; padding: 0;}
+          body {background: black;}
+  canvas {display: block;  height: 100px ; width: 100%;padding-top: 0rem;padding-bottom: 0rem;}
+      </style>
+  </head>
+      <body>
+      <canvas id="c"></canvas>
+      </body>
+      <script>
+  
+  var c = document.getElementById("c");
+  var ctx = c.getContext("2d");
+  
+  //making the canvas full screen
+  c.height = window.innerHeight;
+  c.width = window.innerWidth;
+  
+  //english characters
+  var english = "1001010101110101010101010010101000101011101111010101010110101010101010101110000101";
+  //converting the string into an array of single characters
+  english = english.split("");
+  
+  var font_size = 12;
+  var columns = c.width/font_size; //number of columns for the rain
+  //an array of drops - one per column
+  var drops = [];
+  //x below is the x coordinate
+  //1 = y co-ordinate of the drop(same for every drop initially)
+  for(var x = 0; x < columns; x++)
+    drops[x] = 1; 
+  
+  //drawing the characters
+  function draw()
+  {
+    //Black BG for the canvas
+    //translucent BG to show trail
+    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+    ctx.fillRect(0, 0, c.width, c.height);
+    
+    ctx.fillStyle = "#f9f9e5"; //green text
+    ctx.font = font_size + "px arial";
+    //looping over drops
+    for(var i = 0; i < drops.length; i++)
+    {
+      //a random chinese character to print
+      var text = english[Math.floor(Math.random()*english.length)];
+      //x = i*font_size, y = value of drops[i]*font_size
+      ctx.fillText(text, i*font_size, drops[i]*font_size);
+      
+      //sending the drop back to the top randomly after it has crossed the screen
+      //adding a randomness to the reset to make the drops scattered on the Y axis
+      if(drops[i]*font_size > c.height && Math.random() > 0.975)
+        drops[i] = 0;
+      
+      //incrementing Y coordinate
+      drops[i]++;
+    }
+  }
+  
+  setInterval(draw, 33);
+      </script>
+  </section>
+  
+  <!-- end falling -->
+  
+    <!-- new section -->
+    
+
+<!-- new section -->
+<!-- new section -->
+<!-- new section -->
+
+<!-- new section -->
+    <section>
+      
+      <div class="newbutton">
+        
+  </br>
+  </br>
+  </br>
+        <a href="about.html" class="buttonx">ABOUT</a>
+  </br>
+  </br>
+  </br>
+        <a href="expertise.html" class="buttonx">EXPERTISE</a>
+  </br>
+  </br>
+  </br>
+    <a href="portfolio.html" class="buttonx">SHOWCASE</a>
+     </br>
+    
+      </div>
+    </section>
+
+    <!-- end -->
+    <!-- footer
+    ================================================== -->
+    <footer id="contact" class="s-footer h-dark-bg">
+      <div class="right-vert-line"></div>
+
+      <div class="row s-footer__main">
+        <div class="column large-6">
+          <div class="section-intro" data-aos="fade-up">
+            <h3 class="subhead">GET IN TOUCH</h3>
+
+            <h1 class="display-1">
+              IF YOU'D LIKE TO DISCUSS WORKING TOGETHER,<br />
+              LET'S CHAT!
+            </h1>
+          </div>
+        </div>
+
+        <div class="column large-5">
+          <div class="footer-contacts">
+            <div class="footer-contact-block" data-aos="fade-up">
+              <h5 class="footer-contact-block__header">Email</h5>
+              <p class="footer-contact-block__content">
+                <a href="mailto:mdrrifat7@gmail.com">mdrrifat7@gmail.com</a>
+              </p>
+            </div>
+            <!-- end footer-contact-block -->
+
+            <!-- end footer-contact-block -->
+            <br />
+            <div class="footer-contact-block" data-aos="fade-up">
+              <h5 class="footer-contact-block__header">Social</h5>
+              <ul class="footer-contact-block__list">
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/md-ariful-islam-rifat-793029264/"
+                    ><i
+                      class="fa fa-linkedin-square"
+                      style="font-size: 36px"
+                    ></i
+                  ></a>
+                  &nbsp
+                  <a href="https://github.com/mdrrifat?tab=repositories"
+                    ><i class="fa fa-github" style="font-size: 36px"></i
+                  ></a>
+                  &nbsp
+                  <a href="https://twitter.com/mdrifattt"
+                    ><i class="fa fa-twitter" style="font-size: 36px"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+            <!-- end footer-contact-block -->
+          </div>
+        </div>
+      </div>
+      <!-- end s-footer__main -->
+      <div class="row s-footer__bottom">
+        <div class="column large-full ss-copyright">
+          <span>Rifat © 2023</span>
+          <span>Design by <a href="#">Rifat</a></span>
+        </div>
+        <!-- end ss-copyright -->
+
+        <!-- end ss-go-top -->
+      </div>
+      <!-- end s-footer__bottom -->
+    </footer>
+    <!-- end s-footer -->
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+      <div class="pswp__bg"></div>
+      <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
+
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+            <div class="pswp__counter"></div>
+            <button
+              class="pswp__button pswp__button--close"
+              title="Close (Esc)"
+            ></button>
+            <button
+              class="pswp__button pswp__button--share"
+              title="Share"
+            ></button>
+            <button
+              class="pswp__button pswp__button--fs"
+              title="Toggle fullscreen"
+            ></button>
+            <button
+              class="pswp__button pswp__button--zoom"
+              title="Zoom in/out"
+            ></button>
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"
+          >
+            <div class="pswp__share-tooltip"></div>
+          </div>
+          <button
+            class="pswp__button pswp__button--arrow--left"
+            title="Previous (arrow left)"
+          ></button>
+          <button
+            class="pswp__button pswp__button--arrow--right"
+            title="Next (arrow right)"
+          ></button>
+          <div class="pswp__caption">
+            <div class="pswp__caption__center"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end photoSwipe background -->
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
