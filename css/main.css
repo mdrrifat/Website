@@ -130,14 +130,14 @@
 }
 
 .buttonx {
-  font-size: 3em;
+  font-size: 1.5em;
 
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
   color: var(--clr-neon);
   border: var(--clr-neon) 4px solid;
-  padding: 0.6em 0.5em;
+  padding: 0.4em 0.5em;
   border-radius: 1em;
 
   text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.55), 0 0 0.5em currentColor;
