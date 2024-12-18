@@ -1,7 +1,120 @@
 @import url(https://fonts.googleapis.com/css?family=Orbitron);
 
-/*------------end---------------*/
+/*--------------------------------------*/
+.solar {
+  font-family: sans-serif;
+  font-size: calc(0.5em + 1vmin);
+  color: #eee;
+  background-color: #000000;
+  width: 90%;
+  max-width: 35em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2em;
+}
+.paces {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  position: relative;
+  padding-top: 100%;
+}
+.pace {
+  font-size: 90%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.5em;
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 60%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all ease-in-out 0.2s;
+  .quote {
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    cursor: grabbing;
+    background-color: #111;
+    color: #111;
+    animation: none !important;
+    .quote {
+      color: #fff;
+      hyphens: auto;
+      z-index: 100;
+      opacity: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
 
+.pace {
+  &.aa {
+    margin: 5%;
+    animation: 8s infinite linear rotate;
+    box-shadow: 0 0 5em #fff;
+  }
+  &.bb {
+    margin: 10%;
+    animation: 10s infinite linear rotate;
+  }
+  &.cc {
+    margin: 15%;
+    animation: 12s infinite linear rotate;
+  }
+  &.dd {
+    margin: 20%;
+    animation: 15s infinite linear rotate;
+  }
+  &.ee {
+    margin: 25%;
+    animation: 18s infinite linear rotate;
+  }
+  &.ff {
+    margin: 30%;
+    animation: 25s infinite linear rotate;
+  }
+}
+.quotee {
+  &.aa {
+    padding: 10%;
+  }
+  &.bb {
+    padding: 5%;
+  }
+  &.cc {
+    padding: 4%;
+  }
+}
+.quotes .quotee {
+  opacity: 0;
+  &:target {
+    position: absolute;
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*---------------------end galaxy--------------------*/
 .glitch {
   position: relative;
   font-size: 20px;
@@ -109,7 +222,7 @@
 :root {
   --clr-neon: #f9f9e5;
   /*--clr-neon: hsl(186 100% 69%);*/
-  --clr-bg: rgba(1, 1, 1, 1);
+  --clr-bg: rgb(0, 0, 0);
   --clr-white: rgba(255, 255, 255, 1);
 }
 
@@ -2121,35 +2234,14 @@ input::-moz-focus-inner {
   color: #ffffff;
 }
 
-.right-vert-line {
-  width: 2px;
-  height: 20rem;
-  background-color: #302c59;
-  -webkit-transform: translate3d(50%, 0, 0);
-  transform: translate3d(50%, 0, 0);
-  position: absolute;
-  top: 0;
-  right: 11.2rem;
-}
-
 /* ------------------------------------------------------------------- 
  * responsive:
  * common and reusable styles
  * ------------------------------------------------------------------- */
-@media screen and (max-width: 1200px) {
-  .right-vert-line {
-    right: 9rem;
-  }
-}
 
 @media screen and (max-width: 800px) {
   .section-intro::before {
     font-size: 24rem;
-  }
-
-  .right-vert-line {
-    height: 16rem;
-    right: 6.2rem;
   }
 }
 
@@ -2164,11 +2256,6 @@ input::-moz-focus-inner {
 
   .section-intro::before {
     font-size: 22rem;
-  }
-
-  .right-vert-line {
-    height: 12rem;
-    right: 5rem;
   }
 }
 
@@ -3065,10 +3152,6 @@ html.no-csstransitions .hero-content {
   position: relative;
 }
 
-.s-about .right-vert-line {
-  background-color: #000000;
-}
-
 .s-about__section--profile {
   padding-top: 12rem;
   padding-bottom: 5rem;
@@ -3692,9 +3775,6 @@ html.no-csstransitions .hero-content {
   background-color: #000000;
   position: relative;
 }
-.s-footer .right-vert-line {
-  background-color: #957a36;
-}
 
 .s-footer__bottom {
   font-family: "Orbitron", courier, sans-serif;
@@ -3711,7 +3791,7 @@ html.no-csstransitions .hero-content {
 
 .s-footer .footer-contacts {
   margin-top: 8rem;
-  margin-left: 30%;
+  margin-left: 40%;
 }
 
 /* ------------------------------------------------------------------- 
